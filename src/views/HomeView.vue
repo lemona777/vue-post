@@ -12,6 +12,7 @@
     </AppGrid>
   </div>
   <hr class="my-4" />
+  <p>{{ x }}, {{ y }}</p>
 </template>
 
 <script>
@@ -24,7 +25,7 @@ export default {
 </script>
 
 <script setup>
-import { ref, inject } from 'vue';
+import { reactive, ref, toRefs } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
@@ -36,6 +37,13 @@ const goAboutPage = () => {
 };
 
 const items = ref(['사과', '딸기', '포도', '바나나']);
+
+const position = reactive({
+  x: 100,
+  y: 1000,
+});
+
+const { x, y } = toRefs(position);
 </script>
 
 <style lang="scss" scoped></style>
