@@ -56,7 +56,7 @@ import { useAxios } from '@/hooks/useAxios';
 const props = defineProps({
   id: [String, Number],
 });
-
+//
 const router = useRouter();
 const { vAlert, vSuccess } = useAlert();
 const { error, loading, data: post } = useAxios(`/posts/${props.id}`);
