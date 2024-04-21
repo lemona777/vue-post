@@ -6,7 +6,7 @@ axios.defaults.baseURL = import.meta.env.VITE_APP_API_URL;
 const defaultConfig = {
   method: 'get',
 };
-
+//
 const defaultOptions = {
   immediate: true,
 };
